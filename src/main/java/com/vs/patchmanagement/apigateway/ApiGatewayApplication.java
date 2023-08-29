@@ -9,7 +9,19 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class ApiGatewayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApiGatewayApplication.class, args);
+		String command = "start";
+		if (args.length > 0) {
+			command = args[args.length - 1];
+		}
+		switch (command) {
+			case "start":
+				SpringApplication.run(ApiGatewayApplication.class, args);
+				break;
+			case "stop":
+				System.exit(0);
+				break;
+			default:
+		}
 	}
 
 }

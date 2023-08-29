@@ -16,8 +16,8 @@ repositories {
 }
 
 bootJar {
-	archiveFileName="api-gateway.jar"
-	destinationDirectory = file('../jar')
+	archiveFileName="APIGateway.jar"
+	destinationDirectory = file('../lib')
 }
 
 ext {
